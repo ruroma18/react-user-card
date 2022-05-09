@@ -2,7 +2,7 @@ import React from "react";
 import UserCard from "../UserCards";
 import responseData from "../../data";
 
-function UserCardList(props) {
+function UserCardList() {
   const userCardItem = responseData.map(
     ({ id, firstName, lastName, profilePicture, description }) => {
       const getFullName =

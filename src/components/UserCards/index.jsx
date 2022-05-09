@@ -9,9 +9,9 @@ class UserCard extends React.Component {
       isLoad: true,
     };
   }
-  toggleIsLoad = () => {
+  handlerLoad = () => {
     this.setState({
-      isLoad: true,
+      isLoad: !this.state.isLoad,
     });
   };
 
@@ -34,7 +34,7 @@ class UserCard extends React.Component {
               className="cardImg"
               src={src}
               alt={alt}
-              onError={this.toggleIsLoad}
+              onLoad={this.handlerLoad}
             ></img>
             {isLoad && <div className="initials">{initials}</div>}
           </div>
